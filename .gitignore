@@ -7,3 +7,5 @@ __pycache__/
 
 Pretrained_models/*
 Example_datasets/*
+data/*
+figure/*

@@ -510,7 +510,7 @@ def preprocess_groundtruth_artificial_noise_balanced(ground_truth_folders,before
 
 
 
-def plot_dFF_traces(traces,neuron_indices,frame_rate,spiking=None,discrete_spikes=None,y_range=(-1.5, 2)):
+def plot_dFF_traces(traces,neuron_indices,frame_rate,spiking=None,discrete_spikes=None,y_range=(-1.5, 2),title=None):
 
   """
   Plots a subset (maximum of 50 seconds) of calcium imaging data of a given matrix ('traces'),
@@ -535,6 +535,8 @@ def plot_dFF_traces(traces,neuron_indices,frame_rate,spiking=None,discrete_spike
   plt.tick_params(labelcolor='none', top=False, bottom=False, left=False, right=False)
   plt.xlabel('Time (s)')
   plt.ylabel('dF/F (values normally between 0 and 4)')
+  if title:
+    plt.title(title)
 
   for k,neuron_index in enumerate(neuron_indices):
 
